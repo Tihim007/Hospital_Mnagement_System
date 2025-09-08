@@ -69,3 +69,10 @@ h5.mb-3 {
   background-color: rgba(13,110,253,.1);
   border-radius: .5rem;
 }
+/* Softer card rounding like the screenshot */
+.card.border-0 { border-radius: .5rem; }
+
+/* Make inputs feel roomier like the screenshot */
+.input-group .form-control { padding-top: .7rem; padding-bottom: .7rem; }
+.input-group-text { border-right: 0; }
+.input-group .form-control { border-left: 0; }

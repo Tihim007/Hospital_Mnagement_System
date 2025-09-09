@@ -66,17 +66,26 @@
         <i class="bi bi-envelope"></i> <span>Contact Us</span>
       </a>
     </li>
-
-    <li class="nav-item mt-2 ps-2 text-uppercase small text-muted">Account</li>
+    <li class="nav-item mt-2 ps-2 text-uppercase small text-muted">Admins</li>
     <li class="nav-item">
-      <a class="nav-link d-flex align-items-center gap-2" href="<?= $BASE ?>/view/auth/change-password.php">
-        <i class="bi bi-key"></i> <span>Change Password</span>
+      <a class="nav-link d-flex align-items-center gap-2 <?= (isset($ACTIVE)&&$ACTIVE==='admins')?'active fw-semibold':'' ?>"
+        href="<?= $BASE ?>/view/admins/list.php">
+        <i class="bi bi-people"></i> <span>Admin List</span>
       </a>
     </li>
+     <li class="nav-item">
+      <a class="nav-link d-flex align-items-center gap-2 <?= (isset($ACTIVE) && $ACTIVE==='admins_add') ? 'active fw-semibold' : '' ?>"
+         href="<?= $BASE ?>/view/admins/add.php">
+        <i class="bi bi-person-plus"></i> <span>Add Admin</span>
+      </a>
+    </li>
+
+   <li class="nav-item mt-2 ps-2 text-uppercase small text-muted">Account</li>
     <li class="nav-item">
       <a class="nav-link d-flex align-items-center gap-2 text-danger" href="<?= $BASE ?>/controller/control_logout.php">
         <i class="bi bi-box-arrow-right"></i> <span>Logout</span>
       </a>
+    </li>
     </li>
   </ul>
 </div>

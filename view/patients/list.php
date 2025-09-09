@@ -25,7 +25,8 @@ $rows = PatientModel::all();
           <td><?= htmlspecialchars($p['PatientAge']) ?></td>
           <td>
             <a class="btn btn-sm btn-primary" href="./edit.php?id=<?= $p['ID'] ?>">Edit</a>
-            <a class="btn btn-sm btn-danger" href="../../controller/control_patient_delete.php?id=<?= $p['ID'] ?>" onclick="return confirm('Delete?')">Delete</a>
+            <a class="btn btn-sm btn-outline-danger" href="../../controller/control_patient_delete.php?id=<?= $p['ID'] ?>" onclick="return confirm('Delete?')">
+              <i class="bi bi-trash"></i>Delete</a>
           </td>
         </tr>
       <?php endwhile; ?>

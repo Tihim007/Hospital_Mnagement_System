@@ -26,8 +26,9 @@ $doctors = DoctorModel::all();
         <td><?= htmlspecialchars($d['docEmail']) ?></td>
         <td>
           <a class="btn btn-sm btn-primary" href="./edit.php?id=<?= $d['id'] ?>">Edit</a>
-          <a class="btn btn-sm btn-danger" href="../../controller/control_doctor_delete.php?id=<?= $d['id'] ?>"
-             onclick="return confirm('Delete this doctor?')">Delete</a>
+          <a class="btn btn-sm btn-outline-danger" href="../../controller/control_doctor_delete.php?id=<?= $d['id'] ?>"
+             onclick="return confirm('Delete this doctor?')">
+             <i class="bi bi-trash"></i>Delete</a>
         </td>
       </tr>
       <?php endwhile; ?>

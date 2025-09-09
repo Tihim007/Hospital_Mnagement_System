@@ -36,10 +36,10 @@ $rows = AppointmentModel::historyAll();
         <td><?= htmlspecialchars($a['appointmentDate']) ?></td>
         <td><?= htmlspecialchars($a['appointmentTime']) ?></td>
         <td>
-          <a class="btn btn-sm btn-danger"
+          <a class="btn btn-sm btn-outline-danger"
              href="../controller/control_appointment_delete.php?id=<?= (int)$a['id'] ?>"
              onclick="return confirm('Delete this appointment?');">
-            Delete
+            <i class="bi bi-trash"></i> Delete
           </a>
         </td>
       </tr>

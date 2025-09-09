@@ -25,7 +25,8 @@ $rows = UserModel::all();
         <td><?= htmlspecialchars($u['contactno']) ?></td>
         <td>
           <a class="btn btn-sm btn-primary" href="./edit.php?id=<?= $u['id'] ?>">Edit</a>
-          <a class="btn btn-sm btn-danger" href="../../controller/control_user_delete.php?id=<?= $u['id'] ?>" onclick="return confirm('Delete?')">Delete</a>
+          <a class="btn btn-sm btn-outline-danger" href="../../controller/control_user_delete.php?id=<?= $u['id'] ?>" onclick="return confirm('Delete?')">
+            <i class="bi bi-trash"></i>Delete</a>
         </td>
       </tr>
       <?php endwhile; ?>

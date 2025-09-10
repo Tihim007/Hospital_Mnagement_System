@@ -72,7 +72,7 @@ if (isset($_SESSION['login'])) { header("Location: ../dashboard.php"); exit; }
             </div>
 
             <div class="d-flex justify-content-between align-items-center">
-              <a class="link-primary" href="/hm-mvc/index.php">Bacto Home Page</a>
+              <a class="link-primary" href="/hm-mvc/index.php">Back to Home Page</a>
               <button class="btn btn-primary btn-login">
                 Login <i class="bi bi-arrow-right-circle ms-1"></i>
               </button>

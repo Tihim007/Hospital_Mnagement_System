@@ -15,11 +15,9 @@
     $comment = $_REQUEST['comment'];
     
     if($patientName && $age && $gender && $number && $email) {
-        addPatient($patientName, $age, $gender, $number, $email, $doctorId, $comment);
-        header('Location: allPatientController.php');
+        updatePatient($_POST['id'], $patientName, $age, $gender, $number, $email, $comment);
     } else {
-        echo "<script>alert('Please fill in all required fields'); window.location.href='../view/addPatient.php';</script>";
-        
+        header('Location: allPatientController.php');
         exit();
     }
 ?>

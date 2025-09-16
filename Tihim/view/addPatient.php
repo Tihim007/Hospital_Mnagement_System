@@ -1,8 +1,5 @@
 <?php
-    if(!isset($_SESSION['doctor'])) {
-        header('Location: doctorLogin.php');
-        exit();
-    }
+    
 ?>
 
 <html>
@@ -56,7 +53,7 @@
 
     <body>
         <h2>Add Patient</h2>
-        <form action="../controller/patientController.php" method="GET">
+        <form action="../controller/addPatientController.php" method="POST">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value="" placeholder="Enter Patient Name" required><br><br>
 
@@ -64,10 +61,10 @@
             <input type="number" id="age" name="age" value="" placeholder="Enter Patient Age" required><br><br>
 
             <label for="gender">Sex:</label><br>
-            <input type="select" id="gender" name="gender"  required>
-                <option value="male" name="male"></option>
-                <option value="female" name="female"></option>
-
+            <select id="gender" name="gender"  required>
+                <option value="male" name="male" >Male</option>
+                <option value="female" name="female" >Female</option>
+            </select>
             <br><br>
 
             <label for="number">Contact Number:</label><br>

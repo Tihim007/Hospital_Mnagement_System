@@ -104,7 +104,7 @@
                 <ul>
                     <li><a href="doctorDashboard.php">Home</a></li>
                     <li><a href="#">Appointments</a></li>
-                    <li><a href="addPatient.php">Patients</a></li>
+                    <li><a href="../controller/allPatientController.php">Patients</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="../controller/doctorLogoutController.php">Logout</a></li>
                 </ul>
@@ -142,7 +142,7 @@
                         <div class="card">
                             <h3>Manage Patients</h3>
                             <p>View and update patient records.</p>
-                            <a href="managePatients.php">Go</a>
+                            <a href="../controller/allPatientController.php">Go</a>
                         </div>
                     </div>
                 </div>

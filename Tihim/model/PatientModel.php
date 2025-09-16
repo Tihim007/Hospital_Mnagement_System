@@ -38,7 +38,11 @@
         $conn = getConnection();
         $stmt = "UPDATE patients SET name='$name', age='$age', gender='$gender', number='$number', email='$email', comment='$comment' WHERE id=$patientId";
         if ($conn->query($stmt) === TRUE) {
+            echo "<script>alert('Patient updated successfully'); window.location.href='../controller/allPatientController.php';</script>";
+            return true;
         } else {
-             
+            echo "<script>alert('Error updating patient: " . $conn->error . "'); window.location.href='../view/managePatients.php';</script>";
+            return false;
         }
+    }
 ?>
